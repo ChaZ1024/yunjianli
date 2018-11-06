@@ -1,0 +1,8 @@
+<view class='footTab'>
+  <i-tab-bar current="{{ current }}" bindchange="handleChange">
+    <i-tab-bar-item key="info" icon="addressbook" current-icon="addressbook_fill" title="个人资料"></i-tab-bar-item>
+    <i-tab-bar-item key="edu" icon="dynamic" current-icon="dynamic_fill" title="教育经历"></i-tab-bar-item>
+    <i-tab-bar-item key="work" icon="tasklist" current-icon="tasklist_fill" title="工作经历"></i-tab-bar-item>
+    <i-tab-bar-item key="project" icon="barrage" current-icon="barrage_fill" title="项目经历"></i-tab-bar-item>
+  </i-tab-bar>
+</view>

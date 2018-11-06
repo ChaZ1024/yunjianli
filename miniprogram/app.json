@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/index",
+    "pages/news/index",
+    "pages/index/page"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#011935",
+    "navigationBarTitleText": "云简历",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "i-card": "../../dist/card/index",
+    "i-badge": "../../dist/badge/index",
+    "i-tag": "../../dist/tag/index",
+    "i-icon": "../../dist/icon/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-switch": "../../dist/switch/index",
+    "i-load-more": "../../dist/load-more/index",
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homefill.png"
+      },
+      {
+        "pagePath": "pages/news/index",
+        "text": "攻略",
+        "iconPath": "images/doc.png",
+        "selectedIconPath": "images/docfill.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/minefill.png"
+      }
+    ],
+    "color": "#ffffff",
+    "backgroundColor": "#011935",
+    "borderStyle": "white",
+    "selectedColor": "#37c6c0"
+  }
+}

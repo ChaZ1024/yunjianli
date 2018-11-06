@@ -1,0 +1,40 @@
+<view class="userInfo">
+  <image class='avatar' mode='widthFix' src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/images/noAvatar.png'}}"></image>
+  <view class='nickName'>
+    <text>{{userInfo.nickName?userInfo.nickName:'未登录'}}</text>
+    <text>1111111111</text>
+
+  </view>
+  <image mode='widthFix' src='/images/right.png' class='right'></image>
+</view>
+<view style='margin-bottom:30rpx;'>
+  <button class='loginBtn' hidden='{{showAuthBtn}}' open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登陆</button>
+</view>
+<view>
+  <i-cell-group>
+    <i-cell title="初始设置" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
+
+    <i-cell title="屏蔽设置" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
+    <i-cell title="消息管理" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
+
+    <i-cell title="是否可见">
+      <i-switch value="{{switch1}}" size="large" bind:change="onChange" slot="footer">
+        <view slot="open">开启</view>
+        <view slot="close">关闭</view>
+      </i-switch>
+    </i-cell>
+  </i-cell-group>
+</view>
+
+<view style='margin-top:30rpx;'>
+
+  <i-cell-group>
+    <i-cell title="投诉" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
+    <i-cell title="帮助" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
+    <i-cell title="客服" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
+    <i-cell title="关于" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
+    <i-cell title="账号安全" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
+  </i-cell-group>
+</view>
+
+<i-load-more tip="千顷云简历" loading="{{ false }}" />

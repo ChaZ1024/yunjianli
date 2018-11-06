@@ -1,0 +1,6 @@
+/* miniprogram/pages/index/page.wxss */
+.footTab{
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+}

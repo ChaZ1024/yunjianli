@@ -1,0 +1,11 @@
+.tagBtn{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.i-tags{
+  margin-left: 10rpx;
+}
+.list{
+  margin-top: 10rpx;
+}
