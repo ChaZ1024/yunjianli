@@ -36,6 +36,12 @@
       },
       {
         "pagePath": "pages/news/index",
+        "text": "圈子",
+        "iconPath": "images/quanzi.png",
+        "selectedIconPath": "images/quanzifill.png"
+      },
+      {
+        "pagePath": "pages/news/index",
         "text": "攻略",
         "iconPath": "images/doc.png",
         "selectedIconPath": "images/docfill.png"

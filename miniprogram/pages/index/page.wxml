@@ -1,5 +1,98 @@
+<view class='info-content' hidden='{{current!="info"?true:false}}'>
+  <view class='top-info'>
+    <image mode='widthFix' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541484179093&di=273dc5bdc751ba58d7044d1f9f01b1b1&imgtype=0&src=http%3A%2F%2Fimg.zybus.com%2Fuploads%2Fallimg%2F140610%2F1-140611145K8.jpg'></image>
+    <view class='top-text'>
+      <text>刘德华</text>
+      <text>21岁</text>
+      <text>本科</text>
+      <view>
+        <text>189999999999</text>
+        <image class='callIcon' src='/images/call.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+  </view>
+  <view class='center-info'>
+    <view class='title'>个人信息</view>
+    <view class='base-info'>
+      <view>
+        <text>民族:</text>
+        <text>汉</text>
+      </view>
+      <view>
+        <text>身高:</text>
+        <text>178cm</text>
+      </view>
+      <view>
+        <text>体重:</text>
+        <text>80kg</text>
+      </view>
+      <view>
+        <text>政治面貌:</text>
+        <text>群众</text>
+      </view>
+      <view>
+        <text>毕业院校:</text>
+        <text>五道口职业技术学院</text>
+      </view>
+      <view>
+        <text>微信号:</text>
+        <text>liudehua</text>
+      </view>
+      <view>
+        <text>住址:</text>
+        <text>新北区太湖东路111号</text>
+      </view>
+    </view>
+  </view>
+  <view class='bottom-info'>
+    <view class='title'>自我评价</view>
+    <view class='discription-content'>刘德华出生于香港新界，在家中排行老四，幼时随家人搬到了九龙钻石山的木屋区居住，并和姐弟一起帮助家里打理卖稀饭的生意 。1973年，刘德华随家人搬入香港蓝田邨第15座14楼 。刘德华从黄大仙天主教小学毕业后升读可立中学 。在可立中学读书期间，刘德华积极参加校内学校剧社的表演，在老师杜国威的指导下学习戏剧方面的知识。此外，他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路
+    </view>
+  </view>
+  <view class='like-info'>
+    <view class='title'>个人爱好</view>
+    <view class='like-content'>
+      <i-tag wx:for="{{tags}}" wx:key="{{index}}" bindchange="onChange" checkable="{{true}}" name="{{index}}" color="{{item.color}}" checked="{{item.checked}}" type="border" style="margin-right:5px;">
+        {{item.name}}
+      </i-tag>
+    </view>
+  </view>
+
+  <view class='skill-info'>
+    <view class='title'>掌握技能</view>
+    <view class='skill-content'>
+      <i-tag wx:for="{{skilltags}}" wx:key="{{index}}" bindchange="onChange" checkable="{{true}}" name="{{index}}" color="{{item.color}}" checked="{{item.checked}}" type="border" style="margin-right:5px;">
+        {{item.name}}
+      </i-tag>
+    </view>
+  </view>
+</view>
+
+
+<view class='edu-content' hidden='{{current!="edu"?true:false}}'>
+  edu
+
+</view>
+
+
+
+<view class='work-content' hidden='{{current!="work"?true:false}}'>
+  work
+
+</view>
+
+
+
+<view class='project-content' hidden='{{current!="project"?true:false}}'>
+
+  project
+</view>
+
+
+
 <view class='footTab'>
-  <i-tab-bar current="{{ current }}" bindchange="handleChange">
+  <i-tab-bar current="{{ current }}" color="#011935" bindchange="handleChange">
     <i-tab-bar-item key="info" icon="addressbook" current-icon="addressbook_fill" title="个人资料"></i-tab-bar-item>
     <i-tab-bar-item key="edu" icon="dynamic" current-icon="dynamic_fill" title="教育经历"></i-tab-bar-item>
     <i-tab-bar-item key="work" icon="tasklist" current-icon="tasklist_fill" title="工作经历"></i-tab-bar-item>
