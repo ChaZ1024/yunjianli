@@ -52,9 +52,15 @@ Page({
         name: '删除',
         type: 'delete'
       },
-    ]
+    ],
+    showQrcode: true,
   },
-
+  showQrcode: function() {
+    var showQrcodeState = this.data.showQrcode ? false : true
+    this.setData({
+      showQrcode: showQrcodeState
+    })
+  },
   onLoad: function() {
     if (!wx.cloud) {
       wx.redirectTo({
@@ -84,13 +90,18 @@ Page({
     var id = e.currentTarget.dataset.id;
     var clickType = e.detail.name;
     var url;
-    console.log(clickType)
+    var that = this;
     switch (Number(clickType)) {
       case 0:
         url = "/pages/index/page?id=" + id
         break;
+      case 2:
+        that.setData({
+          showQrcode: that.data.showQrcode ? false : true
+        })
+        break;
     }
-    wx:wx.navigateTo({
+    wx: wx.navigateTo({
       url: url,
       success: function(res) {},
       fail: function(res) {},

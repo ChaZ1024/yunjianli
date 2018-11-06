@@ -12,7 +12,7 @@ Component({
         },
         showOk: {
             type: Boolean,
-            value: true
+            value: false
         },
         showCancel: {
             type: Boolean,
@@ -37,7 +37,9 @@ Component({
             value: 'horizontal'
         }
     },
-
+    ready:function(){
+      console.log(this.data.showOk)
+    },
     methods: {
         handleClickItem ({ currentTarget = {} }) {
             const dataset = currentTarget.dataset || {};

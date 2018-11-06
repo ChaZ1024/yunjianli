@@ -1,10 +1,12 @@
 /* miniprogram/pages/index/page.wxss */
-.footTab{
+
+.footTab {
   width: 100vw;
   position: fixed;
   bottom: 0px;
 }
-.top-info{
+
+.top-info {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,96 +15,145 @@
   background: #fff;
   padding-top: 2vw;
 }
-.top-info>image{
-  width:92vw;
+
+.top-info>image {
+  width: 92vw;
 }
-.top-text{
+
+.top-text {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   margin-top: 20rpx;
   margin-bottom: 2vw;
   align-items: flex-end;
-
 }
-.top-text>text{
+
+.top-text>text {
   margin-left: 2vw;
   font-size: 40rpx;
 }
-.top-text>text:nth-of-type(2),.top-text>text:nth-of-type(3){
+
+.top-text>text:nth-of-type(2), .top-text>text:nth-of-type(3) {
   font-size: 26rpx;
   color: #aaa;
 }
-.top-text>view{
+
+.top-text>view {
   display: flex;
   flex: 1;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.callIcon{
+
+.callIcon {
   width: 70rpx;
   margin-right: 2vw;
 }
-.top-text>view>text{
+
+.top-text>view>text {
   margin-right: 10rpx;
   font-size: 26rpx;
   color: #aaa;
 }
-.center-info{
-   width: 100%;
+
+.center-info {
+  width: 100%;
   background: #fff;
   margin-top: 20rpx;
 }
-.info-content{
+
+.info-content {
   width: 96vw;
   padding: 2vw;
   padding-bottom: 55px;
 }
-.title{
+
+.title {
   padding: 2vw;
   border-bottom: 1rpx solid #ededed;
   font-size: 32rpx;
   background: #fff;
 }
-.base-info{
+
+.base-info {
   padding: 2vw;
 }
-.base-info>view{
+
+.base-info>view {
   display: flex;
   flex-direction: row;
-    padding-top: 2vw;
+  padding-top: 2vw;
   padding-bottom: 2vw;
   font-size: 28rpx;
   border-bottom: 1rpx solid #ededed;
 }
-.base-info>view>text:nth-of-type(1){
+
+.base-info>view>text:nth-of-type(1) {
   flex: 0.3;
 }
-.base-info>view>text:nth-of-type(2){
+
+.base-info>view>text:nth-of-type(2) {
   flex: 1;
 }
-.bottom-info{
+
+.bottom-info {
   margin-top: 20rpx;
 }
-.discription-content{
+
+.discription-content {
   background: #fff;
   padding: 2vw;
   font-size: 28rpx;
   color: #666;
   text-indent: 2rem;
 }
-.like-info{
+
+.like-info {
   margin-top: 20rpx;
 }
-.like-content{
-  padding: 2vw;
-  background: #fff;
-}
-.skill-info{
-  margin-top: 2vw;
 
-}
-.skill-content{
+.like-content {
   padding: 2vw;
   background: #fff;
+}
+
+.skill-info {
+  margin-top: 2vw;
+}
+
+.skill-content {
+  padding: 2vw;
+  background: #fff;
+}
+
+.edu-content {
+  height: 200rpx;
+}
+
+.toolBtns {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top:20rpx;
+  z-index: 1000;
+  right: 20rpx;
+}
+
+.toolBtns image {
+  width: 80rpx;
+  border-radius: 50%;
+  opacity: 0.7;
+  background: #fff;
+}
+.toolBtns button::after{
+  border: none;
+}
+.toolBtns button{
+  width: 80rpx;
+  height: 80rpx;
+  padding: 0;
+  
+  margin-bottom: 10rpx;
+  background-color:transparent; 
 }

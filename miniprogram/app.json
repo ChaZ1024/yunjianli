@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/mine/index",
     "pages/news/index",
-    "pages/index/page"
+    "pages/index/page",
+    "pages/quanzi/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -24,7 +25,8 @@
     "i-switch": "../../dist/switch/index",
     "i-load-more": "../../dist/load-more/index",
     "i-tab-bar": "../../dist/tab-bar/index",
-    "i-tab-bar-item": "../../dist/tab-bar-item/index"
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-modal": "../../dist/modal/index"
   },
   "tabBar": {
     "list": [
@@ -35,7 +37,7 @@
         "selectedIconPath": "images/homefill.png"
       },
       {
-        "pagePath": "pages/news/index",
+        "pagePath": "pages/quanzi/index",
         "text": "圈子",
         "iconPath": "images/quanzi.png",
         "selectedIconPath": "images/quanzifill.png"

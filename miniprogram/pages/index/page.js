@@ -7,6 +7,9 @@ Page({
   data: {
     current: 'info', 
     oneChecked: false,
+    scrollTop:2000,
+    showQrcode:true,
+    height:50,
     tags: [
       {
         name: '标签一',
@@ -52,7 +55,12 @@ Page({
       }
     ]
   },
-
+  showQrcode:function(){
+    var showQrcodeState=this.data.showQrcode?false:true
+    this.setData({
+      showQrcode:showQrcodeState
+    })
+  },
   handleChange({ detail }) {
     this.setData({
       current: detail.key
@@ -62,21 +70,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      scrollTop: 10000
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
-
+  setTop:function(){
+    console.log(this.data.scrollTop)
+    this.setData({
+      scrollTop: 10000
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
 
   /**
@@ -110,7 +125,20 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '这是我的简历，请查看',
+      path: '/pages/index/page?id=123',
+      imageUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541484179093&di=273dc5bdc751ba58d7044d1f9f01b1b1&imgtype=0&src=http%3A%2F%2Fimg.zybus.com%2Fuploads%2Fallimg%2F140610%2F1-140611145K8.jpg'
+    }
+  },
+  callPhone:function(){
+    wx.makePhoneCall({
+      phoneNumber: '18018260611' //仅为示例，并非真实的电话号码
+    })
   }
 })

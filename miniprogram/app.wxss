@@ -8,3 +8,17 @@ button::after {
   border: none;
   border-radius: 0;
 }
+
+.showQrcode{
+  width: 100vw;
+  position: fixed;
+  top:0px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  height: 100vh;
+}
+.showQrcode>image{
+  width: 80vw;
+  margin-top: 25vw;
+  margin-left: 10vw;
+}

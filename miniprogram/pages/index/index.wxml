@@ -23,3 +23,8 @@
   </i-card>
 </view>
 </view>
+
+
+  <view hidden="{{showQrcode}}" class='showQrcode'  bindtap='showQrcode'>
+    <image src='http://weixin.daxzn.com/public/code/10001.jpg' mode='widthFix' ></image>
+  </view>

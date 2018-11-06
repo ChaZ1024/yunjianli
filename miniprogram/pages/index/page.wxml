@@ -1,4 +1,5 @@
 <view class='info-content' hidden='{{current!="info"?true:false}}'>
+
   <view class='top-info'>
     <image mode='widthFix' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541484179093&di=273dc5bdc751ba58d7044d1f9f01b1b1&imgtype=0&src=http%3A%2F%2Fimg.zybus.com%2Fuploads%2Fallimg%2F140610%2F1-140611145K8.jpg'></image>
     <view class='top-text'>
@@ -7,7 +8,7 @@
       <text>本科</text>
       <view>
         <text>189999999999</text>
-        <image class='callIcon' src='/images/call.png' mode='widthFix'></image>
+        <image class='callIcon' src='/images/call.png' mode='widthFix' bindtap='callPhone'></image>
       </view>
     </view>
 
@@ -67,18 +68,23 @@
       </i-tag>
     </view>
   </view>
+
+
+  <view class='toolBtns'>
+    <button open-type='share'><image src='/images/share.png' mode='widthFix'></image></button>
+    <image src='/images/qrcode.png' mode='widthFix' bindtap='showQrcode'></image>
+  </view>
+
 </view>
 
-
 <view class='edu-content' hidden='{{current!="edu"?true:false}}'>
-  edu
+
 
 </view>
 
 
 
 <view class='work-content' hidden='{{current!="work"?true:false}}'>
-  work
 
 </view>
 
@@ -99,3 +105,9 @@
     <i-tab-bar-item key="project" icon="barrage" current-icon="barrage_fill" title="项目经历"></i-tab-bar-item>
   </i-tab-bar>
 </view>
+
+
+
+  <view hidden="{{showQrcode}}" class='showQrcode'  bindtap='showQrcode'>
+    <image src='http://weixin.daxzn.com/public/code/10001.jpg' mode='widthFix' ></image>
+  </view>
