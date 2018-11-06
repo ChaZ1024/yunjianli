@@ -1,13 +1,6 @@
-.tagBtn{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.i-tags{
-  margin-left: 10rpx;
-}
-.list{
-  margin-top: 2vw;
+/* miniprogram/pages/mine/init.wxss */
+.main{
+  padding: 2vw;
 }
 .createResume{
   width: 96vw;
@@ -19,4 +12,5 @@
   padding-bottom: 20rpx;
   margin-top: 2vw;
   font-size: 30rpx;
+  margin-bottom: 20rpx;
 }

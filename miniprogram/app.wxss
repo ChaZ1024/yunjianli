@@ -22,3 +22,8 @@ button::after {
   margin-top: 25vw;
   margin-left: 10vw;
 }
+
+.footBox{
+  width: 100vw;
+  height: 20rpx;
+}

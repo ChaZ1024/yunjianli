@@ -1,0 +1,20 @@
+<view class='main'>
+  <i-panel title="基础用法">
+    <i-input title="姓名" type='text' placeholder="名字" />
+    <i-input title="性别" type='text' disabled value='{{userInfo.sex}}' bindtap='handleOpen' placeholder="性别" />
+    <i-input title="身高" type='text' value='{{userInfo.height}}' placeholder="身高" />
+    <i-input title="体重" type='text' value='{{userInfo.weight}}' placeholder="体重" />
+    <i-input type="number" title="电话" placeholder="请输入手机号" />
+    <i-input type="number" title="年龄" placeholder="请输入年龄" />
+    <i-input type="text" title="邮箱" placeholder="请输入邮箱" />
+    <i-input type="text" title="学历" placeholder="请输入学历" />
+    <i-input type="text" title="政治面貌" placeholder="请输入政治面貌" />
+    <i-input type="text" title="微信号" placeholder="请输入微信号" />
+    <i-input wx:if="{{ !visible1 }}" bind:change='setValue' value='{{userInfo.school}}' data-input="school" type="textarea" title="毕业院校" placeholder="请输入毕业院校" />
+    <i-input wx:if="{{ !visible1 }}" value='{{userInfo.address}}' type="textarea" title="住址" placeholder="请输入居住地址" />
+    <i-input wx:if="{{ !visible1 }}" value='{{userInfo.pingjia}}' type="textarea" title="自我评价" placeholder="请输入自我评价" />
+  </i-panel>
+</view>
+<view class='createResume' bindtap='createResume'>提交</view>
+<view class='footBox'></view>
+<i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel" bind:click="handleClickItem" />

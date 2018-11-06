@@ -13,7 +13,6 @@
 <view>
   <i-cell-group>
     <i-cell title="初始设置" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
-
     <i-cell title="屏蔽设置" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
     <i-cell title="消息管理" class="itemBtn" is-link url="/pages/mine/init"></i-cell>
 
