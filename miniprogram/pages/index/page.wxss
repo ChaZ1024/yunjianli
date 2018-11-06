@@ -127,10 +127,6 @@
   background: #fff;
 }
 
-.edu-content {
-  height: 200rpx;
-}
-
 .toolBtns {
   display: flex;
   flex-direction: column;
@@ -156,4 +152,29 @@
   
   margin-bottom: 10rpx;
   background-color:transparent; 
+}
+.edu-content,.work-content,.project-content{
+  padding: 2vw;
+   padding-bottom: 55px;
+}
+.edu-list,.work-list,.project-list{
+  background: #fff;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ededed;
+}
+.edu-list>view,.work-list>view,.project-list>view{
+  font-size:26rpx;
+  margin-bottom: 20rpx;
+}
+.edu-list>view:nth-of-type(1),.work-list>view:nth-of-type(1),.project-list>view:nth-of-type(1){
+  font-size: 30rpx;
+}
+.edu-nice{
+  margin-top: 30rpx;
+}
+.edu-nice-text{
+  font-size:26rpx;
+  color: #666; 
+  padding: 20rpx;
+  background: #fff;
 }

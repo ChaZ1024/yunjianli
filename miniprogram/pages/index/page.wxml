@@ -71,7 +71,9 @@
 
 
   <view class='toolBtns'>
-    <button open-type='share'><image src='/images/share.png' mode='widthFix'></image></button>
+    <button open-type='share'>
+      <image src='/images/share.png' mode='widthFix'></image>
+    </button>
     <image src='/images/qrcode.png' mode='widthFix' bindtap='showQrcode'></image>
   </view>
 
@@ -79,20 +81,198 @@
 
 <view class='edu-content' hidden='{{current!="edu"?true:false}}'>
 
+  <view class='edu-log'>
+    <view class='title'>教育经历</view>
+    <view class='edu-list'>
+      <view>
+        <text>五道口职业技术学院</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
+
+      <view>
+        <text>专业：</text>
+        <text>计算机技术与应用</text>
+      </view>
+      <view>
+        <text>学历：</text>
+        <text>本科</text>
+      </view>
+    </view>
+    <view class='edu-list'>
+      <view>
+        <text>五道口职业技术学院</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
+
+      <view>
+        <text>专业：</text>
+        <text>计算机技术与应用</text>
+      </view>
+      <view>
+        <text>学历：</text>
+        <text>本科</text>
+      </view>
+    </view>
+
+    <view class='edu-list'>
+      <view>
+        <text>五道口职业技术学院</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
+
+      <view>
+        <text>专业：</text>
+        <text>计算机技术与应用</text>
+      </view>
+      <view>
+        <text>学历：</text>
+        <text>本科</text>
+      </view>
+    </view>
+
+  </view>
+  <view class='edu-nice'>
+    <view class='title'>获奖情况</view>
+    <view class='edu-nice-text'>
+      刘德华出生于香港新界，在家中排行老四，幼时随家人搬到了九龙钻石山的木屋区居住，并和姐弟一起帮助家里打理卖稀饭的生意 。1973年，刘德华随家人搬入香港蓝田邨第15座14楼 。刘德华从黄大仙天主教小学毕业后升读可立中学 。在可立中学读书期间，刘德华积极参加校内学校剧社的表演，在老师杜国威的指导下学习戏剧方面的知识。此外，他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路
+    </view>
+  </view>
 
 </view>
 
 
 
 <view class='work-content' hidden='{{current!="work"?true:false}}'>
+  <view class='work-log'>
+    <view class='title'>工作经历</view>
+    <view class='work-list'>
+      <view>
+        <text>五道口职业技术学院</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
 
+      <view>
+        <text>职位：</text>
+        <text>计算机技术与应用</text>
+      </view>
+      <view>
+        <text>工作内容：</text>
+        <text>他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路</text>
+      </view>
+    </view>
+    <view class='work-list'>
+      <view>
+        <text>五道口职业技术学院</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
+
+      <view>
+        <text>职位：</text>
+        <text>计算机技术与应用</text>
+      </view>
+      <view>
+        <text>工作内容：</text>
+        <text>他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路</text>
+      </view>
+    </view>
+    <view class='work-list'>
+      <view>
+        <text>五道口职业技术学院</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
+
+      <view>
+        <text>职位：</text>
+        <text>计算机技术与应用</text>
+      </view>
+      <view>
+        <text>工作内容：</text>
+        <text>他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路</text>
+      </view>
+    </view>
+
+  </view>
 </view>
 
 
 
 <view class='project-content' hidden='{{current!="project"?true:false}}'>
+ <view class='project-log'>
+    <view class='title'>项目经历</view>
+    <view class='project-list'>
+      <view>
+        <text>云简历</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
 
-  project
+      <view>
+        <text>职责：</text>
+        <text>接口编写</text>
+      </view>
+      <view>
+        <text>项目简介：</text>
+        <text>他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路</text>
+      </view>
+    </view>
+       <view class='project-list'>
+      <view>
+        <text>云简历</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
+
+      <view>
+        <text>职责：</text>
+        <text>接口编写</text>
+      </view>
+      <view>
+        <text>项目简介：</text>
+        <text>他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路</text>
+      </view>
+    </view>
+        <view class='project-list'>
+      <view>
+        <text>云简历</text>
+      </view>
+      <view>
+        <text>时间：</text>
+        <text>2018-10-11 至 2018-10-11</text>
+      </view>
+
+      <view>
+        <text>职责：</text>
+        <text>接口编写</text>
+      </view>
+      <view>
+        <text>项目简介：</text>
+        <text>他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路</text>
+      </view>
+    </view>
+
+  </view>
 </view>
 
 
@@ -108,6 +288,6 @@
 
 
 
-  <view hidden="{{showQrcode}}" class='showQrcode'  bindtap='showQrcode'>
-    <image src='http://weixin.daxzn.com/public/code/10001.jpg' mode='widthFix' ></image>
-  </view>
+<view hidden="{{showQrcode}}" class='showQrcode' bindtap='showQrcode'>
+  <image src='http://weixin.daxzn.com/public/code/10001.jpg' mode='widthFix'></image>
+</view>
