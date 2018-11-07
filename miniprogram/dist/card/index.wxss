@@ -1,6 +1,6 @@
 .i-card {
   margin: 0 2vw;
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
   position: relative;
   background: #fff;
@@ -20,7 +20,7 @@
 }
 .i-card-header-content{
   flex: 1;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 .i-card-header-thumb {
@@ -29,6 +29,7 @@
   height: 64px;
   background-size: cover;
   vertical-align: middle;
+  margin-right: 10rpx;
 }
 
 .i-card-header-title {
@@ -47,7 +48,6 @@
 .i-card-body {
   position: relative;
   padding: 6px;
-  color: #495060;
   font-size: 14px;
 }
 
@@ -69,6 +69,5 @@
 .i-card-footer {
   position: relative;
   padding: 6px;
-  color: #80848f;
-  font-size: 12px;
+  font-size: 14px;
 }

@@ -1,5 +1,5 @@
 /* miniprogram/pages/index/createResume.wxss */
 .main{
-  width: 96vw;
   padding: 2vw;
+  padding-top: 20rpx;
 }

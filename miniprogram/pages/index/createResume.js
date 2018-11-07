@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    current: 0,
-    verticalCurrent: 0,
+    current: 2,
+    verticalCurrent: 2,
     resume:{
       title:"",
       content:'',
@@ -77,6 +77,9 @@ Page({
     this.setData({
       resume: resume
     })
+  },
+  addEdu:function(){
+
   },
   /**
    * 生命周期函数--监听页面加载
