@@ -5,7 +5,8 @@
     "pages/news/index",
     "pages/index/page",
     "pages/quanzi/index",
-    "pages/mine/init"
+    "pages/mine/init",
+    "pages/index/createResume"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -29,10 +30,10 @@
     "i-tab-bar-item": "../../dist/tab-bar-item/index",
     "i-modal": "../../dist/modal/index",
     "i-button": "../../dist/button/index",
-    "i-input": "../../dist/input/index" ,
-    "i-radio-group": "../../dist/radio-group/index",
-    "i-radio": "../../dist/radio/index",
-    "i-action-sheet": "../../dist/action-sheet/index"
+    "i-input": "../../dist/input/index",
+    "i-action-sheet": "../../dist/action-sheet/index",
+    "i-steps": "../../dist/steps/index",
+    "i-step": "../../dist/step/index"
   },
   "tabBar": {
     "list": [

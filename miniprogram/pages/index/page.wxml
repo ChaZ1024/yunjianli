@@ -8,7 +8,7 @@
       <text>本科</text>
       <view>
         <text>189999999999</text>
-        <image class='callIcon' src='/images/call.png' mode='widthFix' bindtap='callPhone'></image>
+        <image class='callIcon'  src='/images/call.png' mode='widthFix' bindtap='callPhone'></image>
       </view>
     </view>
 

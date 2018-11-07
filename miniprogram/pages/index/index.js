@@ -1,29 +1,7 @@
 //index.js
 const app = getApp()
-const db = wx.cloud.database({
-  env: 'dev-5ece68'
-})
-const usersCollection = db.collection('users')
-const userResumeCollection = db.collection('userResume')
-// [{
-//   id: 1,
-//   title: '第一个简历',
-//   content: '这是一份很吊的简历，吊到让我也不知道怎么写简介。就是特别吊，不信你自己看',
-//   date: "208-10-24"
-// },
-// {
-//   id: 2,
-//   title: '第一个简历',
-//   content: '这是一份很吊的简历，吊到让我也不知道怎么写简介。就是特别吊，不信你自己看',
-//   date: "208-10-24"
-// },
-//   {
-//     id: 3,
-//     title: '第一个简历',
-//     content: '这是一份很吊的简历，吊到让我也不知道怎么写简介。就是特别吊，不信你自己看',
-//     date: "208-10-24"
-//   }
-// ]
+const usersCollection = app.openTable('users')
+const resumesCollection = app.openTable('resumes')
 Page({
   data: {
     list: null,
@@ -67,15 +45,12 @@ Page({
     })
   },
   onShow: function() {
-    var openid = app.globalData.openid
-    if(this.data.list==null&&openid){
-      this.getUserResume(openid)
-    }
+
   },
   onLoad: function() {
     if (wx.cloud) {
-      var that=this;
-      var openid = app.globalData.openid
+      var that = this;
+      var openid = wx.getStorageSync('openid')
       if (!openid) {
         wx.cloud.callFunction({
           // 要调用的云函数名称
@@ -83,10 +58,12 @@ Page({
           // 传递给云函数的参数
           data: {}
         }).then(function(e) {
-          var openid = e.result.openid
-          app.globalData.openid = openid
-          that.getUserResume(openid)
+          openid = e.result.openid
+          wx.setStorageSync("openid", openid)
+          that.getUserData(openid)
         })
+      }else{
+        that.getUserData(openid)
       }
     }
     // 获取用户信息
@@ -106,24 +83,66 @@ Page({
       }
     })
   },
-  //获取用户的简历
-  getUserResume:function(e){
+  getUserData:function(e){
     var that=this;
-    userResumeCollection.where({
-      _openid:e
-    }).get().then(function(e){
-      var data = e.data;
-      data.forEach((v,i)=>{
-        var day = v.date.getDate() < 10 ? "0" + v.date.getDate() : v.date.getDate()
-        var date = v.date.getFullYear() + "-" + (v.date.getMonth() + 1) + "-" + day;
-        data[i].date=date
-      })
-      that.setData({
-        list: data
-      })
+    usersCollection.where({
+      _openid: e
+    }).get({
+      success: function (res) {
+        var uid;
+        var data = res.data
+        if (data.length == 0) {
+          usersCollection.add({
+            data: {
+              addtime: new Date()
+            }
+          }).then(e => {
+            that.getUserResume(e)
+            wx.setStorageSync('uid', e._id)
+          })
+        } else {
+          wx.setStorageSync('uid', data[0]._id)
+          that.getUserResume(e)
+        }
+      },
+      fail: function (e) {
+        console.log(e)
+      }
     })
-  },
-  createResume:function(){
+  }
+  ,
+  //获取用户的简历
+  getUserResume: function(res) {
+    var that = this;
+    // resumesCollection.add({
+    //   data:{
+    //       title:'简历建立',
+    //       content:"简历那么吊 你爸妈知道吗？",
+    //       date:new Date()
+    //   }
+    // }).then(e=>{
+    //   console.log(e)
+    // })
+    try {
+      resumesCollection.where({ _openid: res}).get().then(function(e) {
+        var data = e.data;
+        console.log(data)
+        if (data) {
+          data.forEach((v,i) => {
+           
+            var day = v.date.getDate() < 10 ? "0" + v.date.getDate() : v.date.getDate()
+            var date = v.date.getFullYear() + "-" + (v.date.getMonth() + 1) + "-" + day;
+            console.log(date)
+            data[i].date=date
+          })
+          that.setData({
+            list: data
+          })
+        }
+      })
+    } catch (e) {
+      console.log(e)
+    }
 
   },
   onChange: function(e) {
@@ -146,6 +165,11 @@ Page({
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},
+    })
+  },
+  createResume:function(){
+    wx.navigateTo({
+      url: '/pages/index/createResume',
     })
   }
 })
