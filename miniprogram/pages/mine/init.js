@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    visible1: false,
-    actions1: [
+    visible: false,
+    sex: [
       {
         name: '男',
       },
@@ -15,26 +15,26 @@ Page({
       }
     ],
     userInfo:{
-      name:'李狗蛋',
-      sex:'男',
-      pingjia:'超屌的一个人',
-      school:"",
-      address:''
+     
     }
   },
   handleOpen:function(){
     this.setData({
-      visible1:true
+      visible:true
     })
   },
   handleCancel() {
     this.setData({
-      visible1: false
+      visible: false
     });
   },
   handleClickItem:function(e){
-    var key = e.currentTarget.dataset.input
-    console.log(key)
+    var key = e.detail.index
+    var val= this.data.sex[key].name
+    this.setData({
+      "userInfo.sex":val,
+      visible: false
+    })
   },
   setValue:function(e){
    var val = e.detail.detail.value;
@@ -44,6 +44,11 @@ Page({
     this.setData({
       userInfo:userInfo
     })
+  },
+  setInitInfo:function(e){
+
+    console.log(this.data.userInfo)
+
   },
   /**
    * 生命周期函数--监听页面加载
