@@ -58,20 +58,29 @@
   </view>
   <view class='edu-content' wx:if="{{current==2}}">
     <view class='footBox'></view>
-    <view>
-      <i-card title="北京大学" extra="2018-09/2018-10" thumb="">
-        <view slot="content">专业：计算机技术与应用</view>
-        <view slot="footer">
-          学历：本科
-        </view>
-      </i-card>
-      <view class='footBox'></view>
-      <i-card title="北京大学" extra="2018-09/2018-10" thumb="">
-        <view slot="content">专业：计算机技术与应用</view>
-        <view slot="footer">
-          学历：本科
-        </view>
-      </i-card>
+    <view class='card-list-item' wx:for="{{resume.eduInfo}}" wx:key="">
+      <view class='item-top'>
+        <text>学校：{{item.school}}</text>
+        <text>{{item.startTime}}/{{item.endTime}}</text>
+      </view>
+      <view class='item-center'>
+        <view>学历：{{item.eduType}}</view>
+        <view>专业：{{item.major}}</view>
+      </view>
+      <view class='item-down'>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          上移
+        </i-tag>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          下移
+        </i-tag>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          编辑
+        </i-tag>
+         <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          删除
+        </i-tag>
+      </view>
     </view>
 
     <i-button bindclick="addEdu">添加一条</i-button>
@@ -79,40 +88,59 @@
   </view>
   <view class='work-content' wx:if="{{current==3}}">
     <view class='footBox'></view>
-    <view>
-      <i-card title="阿里巴巴" extra="2018-09/2018-10" thumb="">
-        <view slot="content">职位：php</view>
-        <view slot="footer">
-          工作内容：我也不知道干什么的反正每天都没事做，但是还是发工资给我，我感觉没什么意思！
-        </view>
-      </i-card>
-      <view class='footBox'></view>
-     <i-card title="阿里巴巴" extra="2018-09/2018-10" thumb="">
-        <view slot="content">职位：php</view>
-        <view slot="footer">
-          工作内容：我也不知道干什么的反正每天都没事做，但是还是发工资给我，我感觉没什么意思！
-        </view>
-      </i-card>
+    <view class='card-list-item' wx:for="{{resume.workInfo}}" wx:key="">
+      <view class='item-top'>
+        <text>公司：{{item.company}}</text>
+        <text>{{item.startTime}}/{{item.endTime}}</text>
+      </view>
+      <view class='item-center'>
+        <view>职位：{{item.job}}</view>
+        <view>工作内容：{{item.content}}</view>
+      </view>
+      <view class='item-down'>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          上移
+        </i-tag>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          下移
+        </i-tag>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          编辑
+        </i-tag>
+         <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          删除
+        </i-tag>
+      </view>
     </view>
+
 
     <i-button bindclick="addEdu">添加一条</i-button>
   </view>
   <view class='project-content' wx:if="{{current==4}}">
-   <view class='footBox'></view>
-    <view>
-      <i-card title="阿里巴巴" extra="2018-09/2018-10" thumb="">
-        <view slot="content">职责：php</view>
-        <view slot="footer">
-          工作内容：我也不知道干什么的反正每天都没事做，但是还是发工资给我，我感觉没什么意思！
-        </view>
-      </i-card>
-      <view class='footBox'></view>
-     <i-card title="阿里巴巴" extra="2018-09/2018-10" thumb="">
-        <view slot="content">职责：php</view>
-        <view slot="footer">
-          工作内容：我也不知道干什么的反正每天都没事做，但是还是发工资给我，我感觉没什么意思！
-        </view>
-      </i-card>
+    <view class='footBox'></view>
+<view class='card-list-item' wx:for="{{resume.projectInfo}}" wx:key="">
+      <view class='item-top'>
+        <text>项目：{{item.project}}</text>
+        <text>{{item.startTime}}/{{item.endTime}}</text>
+      </view>
+      <view class='item-center'>
+        <view>职责：{{item.work}}</view>
+        <view>项目简介：{{item.content}}</view>
+      </view>
+      <view class='item-down'>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          上移
+        </i-tag>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          下移
+        </i-tag>
+        <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          编辑
+        </i-tag>
+         <i-tag class="i-tags" name="标签一" style="margin-right:5px;" type="border" color="red">
+          删除
+        </i-tag>
+      </view>
     </view>
     <i-button bindclick="addEdu">添加一条</i-button>
   </view>

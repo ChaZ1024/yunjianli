@@ -3,3 +3,37 @@
   padding: 2vw;
   padding-top: 20rpx;
 }
+.card-list-item{
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.item-top{
+  display: flex;
+  font-size: 30rpx;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #efefef;
+}
+.item-center{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #666;border-bottom: 1rpx solid #efefef;
+
+}
+
+.item-center>view{
+  margin-bottom: 20rpx;
+}
+.item-center>view:last-child{
+  margin-bottom: 0rpx;
+}
+.item-down{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  align-items: center;
+  justify-content: flex-end;
+}
