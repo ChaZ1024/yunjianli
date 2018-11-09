@@ -16,24 +16,7 @@
     "navigationBarTextStyle": "white"
   },
   "usingComponents": {
-    "i-card": "../../dist/card/index",
-    "i-badge": "../../dist/badge/index",
-    "i-tag": "../../dist/tag/index",
-    "i-icon": "../../dist/icon/index",
-    "i-cell-group": "../../dist/cell-group/index",
-    "i-cell": "../../dist/cell/index",
-    "i-tabs": "../../dist/tabs/index",
-    "i-tab": "../../dist/tab/index",
-    "i-switch": "../../dist/switch/index",
-    "i-load-more": "../../dist/load-more/index",
-    "i-tab-bar": "../../dist/tab-bar/index",
-    "i-tab-bar-item": "../../dist/tab-bar-item/index",
-    "i-modal": "../../dist/modal/index",
-    "i-button": "../../dist/button/index",
-    "i-input": "../../dist/input/index",
-    "i-action-sheet": "../../dist/action-sheet/index",
-    "i-steps": "../../dist/steps/index",
-    "i-step": "../../dist/step/index"
+ 
   },
   "tabBar": {
     "list": [
