@@ -1,22 +1,45 @@
-.tagBtn{
+.list-item{
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.list-item .title{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ededed;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-tools{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-tools image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+.list-item .content{
+  padding: 20rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #ededed;
+}
+.list-item .footer{
+  padding: 20rpx;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
 }
-.i-tags{
-  margin-left: 10rpx;
-}
-.list{
-  margin-top: 2vw;
-}
-.createResume{
-  width: 96vw;
-  margin-left: 2vw;
-  background: #011935;
+.list-item .footer>view{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  padding: 5rpx 10rpx 5rpx 10rpx;
   color: #fff;
   text-align: center;
-  padding-top: 20rpx;
-  padding-bottom: 20rpx;
-  margin-top: 2vw;
-  font-size: 30rpx;
 }

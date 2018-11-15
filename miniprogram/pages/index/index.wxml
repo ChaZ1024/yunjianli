@@ -1,20 +1,20 @@
 <!--index.wxml-->
 <view class="container">
-  <view wx:for="{{list}}" wx:key="" class='list' wx:for-item="i">
-    <i-card title="{{i.title}}" extra="{{i.date}}" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg" >
-      <view slot="content">{{i.content}}</view>
-      <view slot="footer">
-        <view class='tagBtn'>
-          <i-tag wx:for="{{tags}}" wx:key="{{index}}" data-id="{{i.id}}" bindchange="onChange" checkable="{{true}}" name="{{index}}" color="{{item.color}}" checked="{{item.checked}}" type="dot" style="margin-right:5px;">
-            <i-icon type="{{item.type}}" size="12" />{{item.name}}
-          </i-tag>
-        </view>
+  <view wx:for="{{list}}" wx:key="" class='list-item' wx:for-item="i">
+    <view class='title'>
+      <view>{{i.content}}</view>
+      <view class='title-tools'>
+        <view><image src='/images/share.png' mode='widthFix' /></view>
+        <view><image src='/images/qrcode.png' mode='widthFix' /></view>
       </view>
-    </i-card>
+    </view>
+    <view class="content">{{i.content}}</view>
+    <view class="footer">
+        <view wx:for="{{tags}}" wx:key="{{index}}" data-id="{{i.id}}"  style='background:{{item.color}}'  >
+          {{item.name}}
+      </view>
+    </view>
   </view>
-</view>
-<button onTab="createResume"  type='primary'>新建简历</button>
-<view class='footBox'></view>
-<view hidden="{{showQrcode}}" class='showQrcode' bindtap='showQrcode'>
-  <image src='http://weixin.daxzn.com/public/code/10001.jpg' mode='widthFix'></image>
+  <button onTab="createResume" type='primary'>新建简历</button>
+  <view class='footBox'></view>
 </view>

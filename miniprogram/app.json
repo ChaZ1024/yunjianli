@@ -45,9 +45,9 @@
         "selectedIconPath": "images/minefill.png"
       }
     ],
-    "color": "#ffffff",
-    "backgroundColor": "#011935",
+    "color": "#8a8a8a",
+    "backgroundColor": "#ffffff",
     "borderStyle": "white",
-    "selectedColor": "#37c6c0"
+    "selectedColor": "#011935"
   }
 }
