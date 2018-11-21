@@ -5,8 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    current: 3,
-    verticalCurrent: 3,
+    steps: [
+      {
+        text: '步骤一',
+        desc: '描述信息'
+      },
+      {
+        text: '步骤二',
+        desc: '描述信息'
+      },
+      {
+        text: '步骤三',
+        desc: '描述信息'
+      },
+      {
+        text: '步骤四',
+        desc: '描述信息'
+      }
+    ],
+    active: 0,
     resume: {
       title: "",
       content: '',
@@ -117,22 +134,24 @@ Page({
   },
 
 
-  handleClick() {
-    let addCurrent = this.data.current + 1;
-    let current = addCurrent > 4 ? 0 : addCurrent;
+  nextStep() {
+    let addActive = this.data.active + 1;
+    let active = addActive > 3 ? 0 : addActive;
     this.setData({
-      'current': current
+      'active': active
     })
   },
-  backClick: function() {
-    let addCurrent = this.data.current - 1;
-    let current = addCurrent <= 0 ? 0 : addCurrent;
+  backStep: function() {
+    let addActive = this.data.active -1;
+    let active = addActive <= 0 ? 0 : addActive;
     this.setData({
-      'current': current
+      'active': active
     })
+
   },
   setValue: function(e) {
-    var val = e.detail.detail.value;
+    console.log(e)
+    var val = e.detail
     var key = e.currentTarget.dataset.input;
     var resume = this.data.resume;
     resume[key] = val
@@ -141,7 +160,8 @@ Page({
     })
   },
   setBaseValue: function(e) {
-    var val = e.detail.detail.value;
+    console.log(e)
+    var val = e.detail;
     var key = e.currentTarget.dataset.input;
     var resume = this.data.resume;
     resume.baseInfo[key] = val

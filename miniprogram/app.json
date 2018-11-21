@@ -16,7 +16,10 @@
     "navigationBarTextStyle": "white"
   },
   "usingComponents": {
- 
+      "van-button": "./dist/button/index",
+      "van-steps": "./dist/steps/index",
+      "van-field": "./dist/field/index",
+      "van-panel": "./dist/panel/index"
   },
   "tabBar": {
     "list": [

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    current: 'work', 
+    current: 'info', 
     oneChecked: false,
     scrollTop:2000,
     showQrcode:true,
