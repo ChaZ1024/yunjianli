@@ -22,7 +22,7 @@
 .title-tools image{
   width: 40rpx;
   height: 40rpx;
-  margin-left: 10rpx;
+  margin-left: 20rpx;
 }
 .list-item .content{
   padding: 20rpx;
