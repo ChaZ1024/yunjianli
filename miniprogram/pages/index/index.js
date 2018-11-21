@@ -6,31 +6,25 @@ Page({
   data: {
     list: null,
     tags: [{
-        color: 'green',
+        color: '#011935',
         checked: true,
         name: '查看',
         type: 'activity'
       },
       {
-        color: 'green',
+        color: '#011935',
         checked: true,
         name: '编辑',
         type: 'brush_fill'
       },
       {
-        color: 'green',
-        checked: true,
-        name: '二维码',
-        type: 'tailor'
-      },
-      {
-        color: 'green',
+        color: '#011935',
         checked: true,
         name: '记录',
         type: 'barrage'
       },
       {
-        color: 'red',
+        color: '#d81e06',
         checked: true,
         name: '删除',
         type: 'delete'

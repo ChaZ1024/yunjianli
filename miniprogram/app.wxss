@@ -27,3 +27,14 @@ button::after {
   width: 100%;
   height: 20rpx;
 }
+
+.container{
+  padding: 2vw;
+}
+button::after{
+  border: none;
+}
+button{
+  background: #011935!important;
+  border-radius: 0rpx;
+}

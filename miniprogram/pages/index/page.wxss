@@ -137,21 +137,16 @@
 }
 
 .toolBtns image {
-  width: 80rpx;
+  width: 60rpx;
   border-radius: 50%;
   opacity: 0.7;
   background: #fff;
-}
-.toolBtns button::after{
-  border: none;
+  padding: 15rpx;
 }
 .toolBtns button{
-  width: 80rpx;
-  height: 80rpx;
-  padding: 0;
-  
-  margin-bottom: 10rpx;
-  background-color:transparent; 
+  background-color:transparent!important; 
+  padding: 0rpx;
+  line-height: normal;
 }
 .edu-content,.work-content,.project-content{
   padding: 2vw;

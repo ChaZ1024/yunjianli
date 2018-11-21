@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+<<<<<<< HEAD
   <view wx:for="{{list}}" wx:key="" class='list' wx:for-item="i">
     <van-panel title="{{i.title}}" desc="{{i.date}}" status="状态" use-footer-slot>
       <view>{{i.content}}</view>
@@ -14,4 +15,23 @@
   <view hidden="{{showQrcode}}" class='showQrcode' bindtap='showQrcode'>
     <image src='http://weixin.daxzn.com/public/code/10001.jpg' mode='widthFix'></image>
   </view>
+=======
+  <view wx:for="{{list}}" wx:key="" class='list-item' wx:for-item="i">
+    <view class='title'>
+      <view>{{i.content}}</view>
+      <view class='title-tools'>
+        <view><image src='/images/share.png' mode='widthFix' /></view>
+        <view><image src='/images/qrcode.png' mode='widthFix' /></view>
+      </view>
+    </view>
+    <view class="content">{{i.content}}</view>
+    <view class="footer">
+        <view wx:for="{{tags}}" wx:key="{{index}}" data-id="{{i.id}}"  style='background:{{item.color}}'  >
+          {{item.name}}
+      </view>
+    </view>
+  </view>
+  <button onTab="createResume" type='primary'>新建简历</button>
+  <view class='footBox'></view>
+>>>>>>> b133e1b2f4ac4f82b258552d1cb04be3c6628f0c
 </view>
