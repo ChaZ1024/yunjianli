@@ -165,5 +165,19 @@ Page({
     wx.navigateTo({
       url: '/pages/index/createResume',
     })
+  },
+  clickItem:function(e){
+    console.log(e)
+    console.log(e.currentTarget.dataset.idx)
+    var url;
+    if (e.currentTarget.dataset.idx==0){
+      url = "/pages/index/page?id=" + e.currentTarget.id
+    }
+    wx.navigateTo({
+      url: url,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
   }
 })

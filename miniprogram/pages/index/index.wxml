@@ -10,7 +10,7 @@
     </view>
     <view class="content">{{i.content}}</view>
     <view class="footer">
-        <view wx:for="{{tags}}" wx:key="{{index}}" data-id="{{i.id}}"  style='background:{{item.color}}'  >
+        <view wx:for="{{tags}}" wx:key="{{index}}" id="{{i._id}}" data-idx='{{index}}'  bindtap='clickItem' style='background:{{item.color}}'  >
           {{item.name}}
       </view>
     </view>

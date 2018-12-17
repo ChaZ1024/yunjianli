@@ -121,7 +121,11 @@ Page({
   onReachBottom: function () {
 
   },
-
+  clickFootTab:function(e){
+    this.setData({
+      current: e.currentTarget.dataset.key
+    })
+  },
   /**
    * 用户点击右上角分享
    */

@@ -8,7 +8,7 @@
       <text>本科</text>
       <view>
         <text>189999999999</text>
-        <image class='callIcon'  src='/images/call.png' mode='widthFix' bindtap='callPhone'></image>
+        <image class='callIcon' src='/images/call.png' mode='widthFix' bindtap='callPhone'></image>
       </view>
     </view>
 
@@ -215,7 +215,7 @@
 
 
 <view class='project-content' hidden='{{current!="project"?true:false}}'>
- <view class='project-log'>
+  <view class='project-log'>
     <view class='title'>项目经历</view>
     <view class='project-list'>
       <view>
@@ -235,7 +235,7 @@
         <text>他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路</text>
       </view>
     </view>
-       <view class='project-list'>
+    <view class='project-list'>
       <view>
         <text>云简历</text>
       </view>
@@ -253,7 +253,7 @@
         <text>他还参与包括编剧在内的幕后制作。刘德华在中五会考获得1B3D2E（中文读本A）的成绩。中六上学期后，他到香港电视广播有限公司的艺员训练班受训，从而开始了演艺之路</text>
       </view>
     </view>
-        <view class='project-list'>
+    <view class='project-list'>
       <view>
         <text>云简历</text>
       </view>
@@ -273,17 +273,27 @@
     </view>
 
   </view>
+
+
 </view>
 
 
-
 <view class='footTab'>
-  <i-tab-bar current="{{ current }}" color="#011935" bindchange="handleChange">
-    <i-tab-bar-item key="info" icon="addressbook" current-icon="addressbook_fill" title="个人资料"></i-tab-bar-item>
-    <i-tab-bar-item key="edu" icon="dynamic" current-icon="dynamic_fill" title="教育经历"></i-tab-bar-item>
-    <i-tab-bar-item key="work" icon="tasklist" current-icon="tasklist_fill" title="工作经历"></i-tab-bar-item>
-    <i-tab-bar-item key="project" icon="barrage" current-icon="barrage_fill" title="项目经历"></i-tab-bar-item>
-  </i-tab-bar>
+  <view data-key="info" class='{{current=="info"?"checked":""}}' bindtap='clickFootTab'>
+    <image src='{{current=="info"?"../../images/base-fill.png":"../../images/base.png"}}' mode='widthFix' />
+    <text>个人资料</text> </view>
+  <view data-key="edu" class='{{current=="edu"?"checked":""}}' bindtap='clickFootTab'>
+    <image src='{{current=="edu"?"../../images/edu-fill.png":"../../images/edu.png"}}' mode='widthFix' />
+    <text>教育经历</text>
+  </view>
+  <view data-key="work"  class='{{current=="work"?"checked":""}}'bindtap='clickFootTab'>
+    <image src='{{current=="work"?"../../images/work-fill.png":"../../images/work.png"}}' mode='widthFix' />
+    <text>工作经历</text>
+  </view>
+  <view data-key="project" class='{{current=="project"?"checked":""}}' bindtap='clickFootTab'>
+    <image src='{{current=="project"?"../../images/pro-fill.png":"../../images/pro.png"}}' mode='widthFix' />
+    <text>项目经历</text>
+  </view>
 </view>
 
 
